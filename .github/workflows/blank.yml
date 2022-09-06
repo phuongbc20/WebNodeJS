@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   call-workflow:
-    uses: phuongbc20/golang/.github/workflows/go.yml@dev
+    uses: phuongbc20/Golang/.github/workflows/go.yml@dev
     with:
       username: test
 
