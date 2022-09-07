@@ -12,10 +12,12 @@ jobs:
   release-job:
     runs-on: ubuntu-latest
     name: Releasing
-    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - name: Run a one-line script
+        if: startsWith(github.ref, 'refs/tags/v')
         run: echo release!
+      - name: Run a one-line script
+        run: echo normal!
 
   build:
     runs-on: ubuntu-latest
