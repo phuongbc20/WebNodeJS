@@ -12,7 +12,7 @@ jobs:
   release-job:
     runs-on: ubuntu-latest
     name: Releasing
-    if: github.event_name == 'release' && github.event.action == 'created'
+    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - name: Run a one-line script
         run: echo release!
