@@ -4,9 +4,12 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  workflow_dispatch:
-  release:
-    types: [created]
+  push:
+    branches:
+      - dev
+      - staging
+    tags:
+      - "*"
 
 jobs:
   release-job:
